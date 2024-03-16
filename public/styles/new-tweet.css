@@ -7,7 +7,6 @@
 .tweet-button {
   background-color: purple;
   color: antiquewhite;
-  font-family: Bungee, sans-serif;
 }
 input {
   background-color: #f4f1ec;
@@ -19,8 +18,9 @@ input {
   margin-bottom: 20px;
   font-weight: bold;
 }
-under-text {
+.under-text {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: Bungee, sans-serif;
 }
