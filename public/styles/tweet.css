@@ -1,4 +1,4 @@
-.current-tweets {
+article {
   margin-top: 2em;
   background-color: inherit;
   width: 500px;
@@ -7,7 +7,7 @@
   border-width: 3px;
   padding: 0.5em;
 }
-.current-tweets:hover {
+article:hover {
   box-shadow: 5px 5px;
 }
 
