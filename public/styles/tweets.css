@@ -1,0 +1,63 @@
+.current-tweets {
+  margin-top: 2em;
+  background-color: inherit;
+  width: 500px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  padding: 0.5em;
+}
+.current-tweets:hover {
+  box-shadow: 5px 5px;
+}
+
+.current-tweets-top {
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.top-left {
+  font-weight: 100;
+  display: flex;
+  flex-direction: row;
+}
+.top-right {
+  color: rgb(183, 181, 181);
+}
+
+.current-profile-pic {
+  width: 2.5em;
+  height: 2.5em;
+}
+p {
+  font-style: normal;
+  padding-bottom: 0.5em;
+  border-bottom: 3px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: black;
+}
+
+.bottom {
+  font-size: smaller;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.fa-flag:hover {
+  color: rgba(255, 225, 0, 0.654);
+}
+.fa-repeat:hover {
+  color: rgba(255, 225, 0, 0.654);
+}
+.fa-heart:hover {
+  color: rgba(255, 225, 0, 0.654);
+}

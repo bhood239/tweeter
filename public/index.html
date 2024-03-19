@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,7 +35,7 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <header class="user-profile">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -56,6 +57,26 @@
           </div>
         </form>
       </section>
+      <section class="current-tweets">
+        <header class="current-tweets-top">
+          <div class="top-left">
+            <img class="current-profile-pic" src="/images/profile-hex.png"> 
+            <div>Ben Hood</div>
+          </div>
+          <div class="top-right">@bhood239</div>
+        </header>
+        <footer>
+          <p>Loving the weather today!</p>
+          <div class="bottom">
+            <div>2 days ago</div>
+            <div>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-repeat"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+        </footer>
+     </section>
     </main>
     <textarea class="textbox" id="textbox" cols="30" rows="10"></textarea>
   </body>
