@@ -27,6 +27,7 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/submit-listener.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweetValidation.js"></script>
   </head>
 
   <body>
@@ -52,13 +53,13 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class="tweet-form" action="/tweets" method="POST">
-          <input name="text" class="tweet-text"  placeholder="What are you humming about?">
+        <form class="tweet-form" action="/tweets" method="POST" onsubmit="return validateTweet()">
+          <input name="text" class="tweet-text" placeholder="What are you humming about?" required>
           <div class="under-text">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
-        </form>
+      </form>
       </section>
       <article class="tweets-container"></article>
     </main>

@@ -59,5 +59,25 @@ $(document).ready(function() {
   
   // Call the loadTweets function to fetch the tweets
   loadTweets();
+
+  function validateTweet() {
+    // Get the value of the input field
+    const tweetText = document.querySelector('.tweet-text').value;
+    
+    // Check if the tweet is empty or null
+    if (!tweetText || tweetText.trim() === '') {
+        alert('Tweet cannot be empty!');
+        return false; // Prevent form submission
+    }
+
+    // Check if the tweet exceeds 140 characters
+    if (tweetText.length > 140) {
+        alert('Tweet cannot exceed 140 characters!');
+        return false; // Prevent form submission
+    }
+
+    // If validation passes, allow form submission
+    return true;
+  }
 });
 
