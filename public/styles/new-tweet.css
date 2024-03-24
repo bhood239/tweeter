@@ -24,3 +24,24 @@ input {
   justify-content: space-between;
   font-family: Bungee, sans-serif;
 }
+
+.error-message{
+  color: white;
+  background: #c51244 !important;
+  padding: 10px !important;
+  position: relative; 
+  display: inline-block !important;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px;
+}
+
+.error-message:before{
+  content: '';  
+  width: 0;  
+  height: 0;  
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #c51244;
+  position: absolute;  
+  top: -10px; 
+}

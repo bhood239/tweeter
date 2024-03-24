@@ -57,19 +57,20 @@ const loadTweets = function() {
     });
 };
 
+
 //Function to validate tweets
 function validateTweet() {
   const tweetText = document.querySelector('.tweet-text').value;
   
   // Check if the tweet is empty or null
   if (!tweetText || tweetText.trim() === '') {
-      alert('Tweet cannot be empty!');
+      $('.new-tweet').append($('<p class="error-message">Write something!</p>'));
       return false;
   }
 
   // Check if the tweet exceeds 140 characters
   if (tweetText.length > 140) {
-      alert('Tweet cannot exceed 140 characters!');
+      $('.new-tweet').append($('<p class="error-message">Thats too much! Only 140 characters plz</p>'));
       return false;
   }
 
