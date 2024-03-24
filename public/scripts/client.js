@@ -19,7 +19,7 @@ $(document).ready(function() {
           <div class="top-right">${tweetObject.user.handle}</div>
         </header>
         <footer>
-          <p>${tweetObject.content.text}</p>
+          <p></p>
           <div class="bottom">
             <div>${formattedDate}</div>
             <div>
@@ -31,6 +31,7 @@ $(document).ready(function() {
         </footer>
     `);
 
+    $tweet.find("p").text(tweetObject.content.text);
     return $tweet;
   };
 
