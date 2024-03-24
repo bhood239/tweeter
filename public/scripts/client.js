@@ -34,50 +34,69 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Function to render tweets
   const renderTweets = function(tweets) {
-    // loops through tweets
+    $('.tweets-container').empty(); // Clear existing tweets
     for (const tweet of tweets) {
-      // calls createTweetElement for each tweet
-      const $tweet = createTweetElement(tweet);
-      // takes return value and appends it to the tweets container
-      $('.tweets-container').prepend($tweet);
+        const $tweet = createTweetElement(tweet);
+        $('.tweets-container').prepend($tweet); // Append new tweet
     }
-  }
+};
 
-
-  function loadTweets() {
+// Function to load tweets via AJAX
+const loadTweets = function() {
     $.ajax({
-      url: '/tweets',
-      method: 'GET',
-      dataType: 'json',
-      success: renderTweets,
-      error: function(xhr, status, error) {
-        console.error('Error loading tweets:', error);
-      }
+        url: '/tweets',
+        method: 'GET',
+        dataType: 'json',
+        success: renderTweets,
+        error: function(xhr, status, error) {
+            console.error('Error loading tweets:', error);
+        }
     });
-  }
+};
+
+//Function to validate tweets
+function validateTweet() {
+  const tweetText = document.querySelector('.tweet-text').value;
   
-  // Call the loadTweets function to fetch the tweets
-  loadTweets();
-
-  function validateTweet() {
-    // Get the value of the input field
-    const tweetText = document.querySelector('.tweet-text').value;
-    
-    // Check if the tweet is empty or null
-    if (!tweetText || tweetText.trim() === '') {
-        alert('Tweet cannot be empty!');
-        return false; // Prevent form submission
-    }
-
-    // Check if the tweet exceeds 140 characters
-    if (tweetText.length > 140) {
-        alert('Tweet cannot exceed 140 characters!');
-        return false; // Prevent form submission
-    }
-
-    // If validation passes, allow form submission
-    return true;
+  // Check if the tweet is empty or null
+  if (!tweetText || tweetText.trim() === '') {
+      alert('Tweet cannot be empty!');
+      return false;
   }
+
+  // Check if the tweet exceeds 140 characters
+  if (tweetText.length > 140) {
+      alert('Tweet cannot exceed 140 characters!');
+      return false;
+  }
+
+  return true;
+}
+
+// Form submission event handler
+$(".tweet-form").submit(function(event) {
+    event.preventDefault();
+
+     // Validate tweet
+     if (!validateTweet()) {
+      return false; // Prevent form submission if validation fails
+     }
+    const formData = $(this).serialize(); // Serialize form data
+
+    // Send AJAX POST request to submit the form data
+    $.post("/tweets", formData)
+        .done(function(response) {
+            loadTweets(); // Load tweets after successful submission
+        })
+        .fail(function(xhr, status, error) {
+            console.error('Error submitting tweet:', error);
+        });
+});
+
+// Load tweets once page is ready
+loadTweets();
+
 });
 
