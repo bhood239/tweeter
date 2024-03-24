@@ -25,17 +25,16 @@ input {
   font-family: Bungee, sans-serif;
 }
 
-.error-message{
+.error-message {
   color: white;
-  background: #c51244 !important;
-  padding: 10px !important;
+  background: #c51244;
+  padding: 10px;
   position: relative; 
-  display: inline-block !important;
-  box-shadow: 1px 1px 1px #aaaaaa;
+  display: inline-block;
   margin-top: 10px;
 }
 
-.error-message:before{
+.error-message:before {
   content: '';  
   width: 0;  
   height: 0;  

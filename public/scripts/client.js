@@ -35,6 +35,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  
   // Function to render tweets
   const renderTweets = function(tweets) {
     $('.tweets-container').empty(); // Clear existing tweets
@@ -43,6 +44,7 @@ $(document).ready(function() {
         $('.tweets-container').prepend($tweet); // Append new tweet
     }
 };
+
 
 // Function to load tweets via AJAX
 const loadTweets = function() {
@@ -61,21 +63,16 @@ const loadTweets = function() {
 //Function to validate tweets
 function validateTweet() {
   const tweetText = document.querySelector('.tweet-text').value;
-  
-  // Check if the tweet is empty or null
-  if (!tweetText || tweetText.trim() === '') {
-      $('.new-tweet').append($('<p class="error-message">Write something!</p>'));
-      return false;
-  }
 
-  // Check if the tweet exceeds 140 characters
-  if (tweetText.length > 140) {
-      $('.new-tweet').append($('<p class="error-message">Thats too much! Only 140 characters plz</p>'));
-      return false;
-  }
+  const isEmpty = !tweetText;
+  const isTooLong = tweetText.length > 140;
 
-  return true;
+  $('.empty-error').toggle(isEmpty);
+  $('.length-error').toggle(isTooLong);
+
+  return !isEmpty && !isTooLong;
 }
+
 
 // Form submission event handler
 $(".tweet-form").submit(function(event) {
