@@ -32,3 +32,10 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media screen and (min-width: 1024px){
+  body {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+  }
+}
