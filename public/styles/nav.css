@@ -10,6 +10,8 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
+  background-color: #2b73ab;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
 }
 
 .nav-title {
@@ -25,5 +27,12 @@ nav {
 @media screen and (min-width: 1024px){
   nav {
     background-color: #4056A1;
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-title {
+    font-size: xxx-large;
   }
 }

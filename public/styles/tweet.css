@@ -2,12 +2,16 @@ article {
   margin-top: 2em;
   background-color: inherit;
   width: 500px;
-  border-color: black;
-  border-style: solid;
-  border-width: 3px;
   padding: 0.5em;
 }
-article:hover {
+
+.tweet-whole {
+  border: black solid 3px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.tweet-whole:hover {
   box-shadow: 5px 5px;
 }
 
@@ -17,13 +21,6 @@ article:hover {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1em;
-  padding-top: 1em;
-  border-top: 3px;
-  border-color: black;
-  border-style: solid;
-  border-bottom: 0;
-  border-right: 0;
-  border-left: 0;
 }
 
 .top-left {
@@ -39,15 +36,10 @@ article:hover {
   width: 2.5em;
   height: 2.5em;
 }
+
 p {
   font-style: normal;
   padding-bottom: 0.5em;
-  border-bottom: 3px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-style: solid;
-  border-color: black;
 }
 
 .bottom {
@@ -57,6 +49,9 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  border-top: black solid 3px;
 }
 
 .fa-flag:hover {
