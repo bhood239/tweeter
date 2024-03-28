@@ -1,48 +1,46 @@
+// common style variables
+$border-color: black;
+$username-color: rgb(183, 181, 181);
+$main-background-color: #f4f1ec;
+$icons-hover-color: rgba(255, 225, 0, 0.654);
+
 article {
   margin-top: 2em;
   background-color: inherit;
   width: 500px;
   padding: 0.5em;
 }
-
 .tweet-whole {
-  border: black solid 3px;
+  border: $border-color solid 3px;
   padding: 1em;
   margin-bottom: 1em;
 }
-
 .tweet-whole:hover {
   box-shadow: 5px 5px;
 }
-
 .current-tweets-top {
-  background-color: #f4f1ec;
+  background-color: $main-background-color;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1em;
 }
-
 .top-left {
   font-weight: 100;
   display: flex;
   flex-direction: row;
 }
-
 .top-right {
-  color: rgb(183, 181, 181);
+  color: $username-color;
 }
-
 .current-profile-pic {
   width: 2.5em;
   height: 2.5em;
 }
-
 p {
   font-style: normal;
   padding-bottom: 0.5em;
 }
-
 .bottom {
   font-size: smaller;
   margin-top: 1em;
@@ -52,17 +50,14 @@ p {
   align-items: flex-end;
   padding-top: 1em;
   margin-bottom: 1em;
-  border-top: black solid 3px;
+  border-top: $border-color solid 3px;
 }
-
 .fa-flag:hover {
-  color: rgba(255, 225, 0, 0.654);
+  color: $icons-hover-color;
 }
-
 .fa-repeat:hover {
-  color: rgba(255, 225, 0, 0.654);
+  color: $icons-hover-color;
 }
-
 .fa-heart:hover {
-  color: rgba(255, 225, 0, 0.654);
+  color: $icons-hover-color;
 }

@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $( ".tweet-text" ).on( "input", function( event ) {
+  $(".tweet-text").on("input", function() {
     const maxLength = 140;
     const currentLength = $(this).val().length;
     const remaining = maxLength - currentLength;
@@ -11,5 +11,5 @@ $(document).ready(function() {
     } else {
       $counter.css('color', '');
     }
-  })
-})
+  });
+});

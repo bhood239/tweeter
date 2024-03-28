@@ -1,3 +1,7 @@
+// common style variables
+$main-background-color: #f4f1ec;
+$body-font: "Source Sans 3", sans-serif;
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -6,7 +10,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +17,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: $main-background-color;
   font-size: 24px;
-  font-family: "Source Sans 3", sans-serif;
+  font-family:  $body-font;
 }
 
 main {
@@ -32,7 +36,7 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-@media screen and (min-width: 1024px) {
+ @media screen and (min-width: 1024px){
   body {
     margin-top: 120px;
     display: flex;

@@ -1,0 +1,57 @@
+// common style variables
+$logo-font: Bungee, sans-serif;
+$body-font: "Source Sans 3", sans-serif;
+$nav-color: #2b73ab;
+$nav-color-lg: #4056A1;
+$nav-font-color: #FFFFFF;
+
+nav {
+  height: 120px;
+  width: 100vw;
+  color: $nav-font-color;
+  padding: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: $nav-color;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+  .nav-title {
+    font-family: $logo-font;
+  }
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  i {
+    animation: MoveUpDown 1s linear infinite;
+    left: 0;
+    bottom: 0;
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  nav {
+    background-color: $nav-color-lg;
+    background-image: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-title {
+    font-size: xxx-large;
+  }
+}

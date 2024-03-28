@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
  
-
+  // tweet container
   const createTweetElement = function(tweetObject) {
     const formattedDate = timeago.format(tweetObject.created_at);
 
@@ -42,62 +42,62 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     $('.tweets-container').empty(); // Clear existing tweets
     for (const tweet of tweets) {
-        const $tweet = createTweetElement(tweet);
-        $('.tweets-container').prepend($tweet); // Append new tweet
+      const $tweet = createTweetElement(tweet);
+      $('.tweets-container').prepend($tweet); // Append new tweet
     }
-};
+  };
 
 
-// Function to load tweets via AJAX
-const loadTweets = function() {
+  // Function to load tweets via AJAX
+  const loadTweets = function() {
     $.ajax({
-        url: '/tweets',
-        method: 'GET',
-        dataType: 'json',
-        success: renderTweets,
-        error: function(xhr, status, error) {
-            console.error('Error loading tweets:', error);
-        }
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: renderTweets,
+      error: function(xhr, status, error) {
+          console.error('Error loading tweets:', error);
+      }
     });
-};
+  };
 
 
-//Function to validate tweets
-function validateTweet() {
-  const tweetText = document.querySelector('.tweet-text').value;
+  //Function to validate tweets
+  function validateTweet() {
+    const tweetText = document.querySelector('.tweet-text').value;
 
-  const isEmpty = !tweetText;
-  const isTooLong = tweetText.length > 140;
+    const isEmpty = !tweetText;
+    const isTooLong = tweetText.length > 140;
 
-  $('.empty-error').toggle(isEmpty);
-  $('.length-error').toggle(isTooLong);
+    $('.empty-error').toggle(isEmpty);
+    $('.length-error').toggle(isTooLong);
 
-  return !isEmpty && !isTooLong;
-}
+    return !isEmpty && !isTooLong;
+  }
 
 
-// Form submission event handler
-$(".tweet-form").submit(function(event) {
+  // Form submission event handler
+  $(".tweet-form").submit(function(event) {
     event.preventDefault();
 
-     // Validate tweet
-     if (!validateTweet()) {
+    // Validate tweet
+    if (!validateTweet()) {
       return false; // Prevent form submission if validation fails
-     }
+    }
     const formData = $(this).serialize(); // Serialize form data
 
     // Send AJAX POST request to submit the form data
     $.post("/tweets", formData)
-        .done(function(response) {
-            loadTweets(); // Load tweets after successful submission
-        })
-        .fail(function(xhr, status, error) {
-            console.error('Error submitting tweet:', error);
-        });
-});
+      .done(function(response) {
+        loadTweets(); // Load tweets after successful submission
+      })
+      .fail(function(xhr, status, error) {
+        console.error('Error submitting tweet:', error);
+      });
+  });
 
-// Load tweets once page is ready
-loadTweets();
+  // Load tweets once page is ready
+  loadTweets();
 
 });
 

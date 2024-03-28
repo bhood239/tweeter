@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .user-profile {
     margin-top: 100px;
     width: 40%;
