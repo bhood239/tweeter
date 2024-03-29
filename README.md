@@ -6,9 +6,9 @@ Through creating this project, I have used my HTML, CSS, SCSS, JS, jQuery and AJ
 
 ## Final Product
 
-!["screenshot of mobile page"](https://github.com/bhood239/tweeter/blob/master/public/images/layout-mobile.png?raw=true)
-!["screenshot of tablet page"](https://github.com/bhood239/tweeter/blob/master/public/images/layout-tablet.png?raw=true)
-!["screenshot of tablet page"](https://github.com/bhood239/tweeter/blob/master/public/images/Layout-lg.png?raw=true)
+!["screenshot of mobile page"](https://github.com/bhood239/tweeter/blob/master/docs/layout-mobile.png?raw=true)
+!["screenshot of tablet page"](https://github.com/bhood239/tweeter/blob/master/docs/layout-tablet.png?raw=true)
+!["screenshot of tablet page"](https://github.com/bhood239/tweeter/blob/master/docs/Layout-lg.png?raw=true)
 
 ## Dependencies
 
