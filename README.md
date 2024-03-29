@@ -5,9 +5,11 @@ Tweeter is a simple, single-page Twitter clone.
 Through creating this project, I have used my HTML, CSS, SCSS, JS, jQuery and AJAX front-end skills, and my Node, Express back-end skills.
 
 ## Final Product
-
+Mobile view:
 !["screenshot of mobile page"](https://github.com/bhood239/tweeter/blob/master/docs/layout-mobile.png?raw=true)
+Tablet view:
 !["screenshot of tablet page"](https://github.com/bhood239/tweeter/blob/master/docs/layout-tablet.png?raw=true)
+Desktop view:
 !["screenshot of tablet page"](https://github.com/bhood239/tweeter/blob/master/docs/Layout-lg.png?raw=true)
 
 ## Dependencies
